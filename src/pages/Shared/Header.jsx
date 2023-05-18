@@ -39,7 +39,7 @@ const Header = () => {
             </div>
             <div className="navbar-end">
                {
-                user?<div className='flex gap-2 items-center'><img src={user.photoURL} className='rounded-full w-12 h-12 ' alt="" /> <button onClick={handleLogOut} className='btn btn-error'>Logout</button></div>:
+                user?<div className='flex gap-2 items-center'><img src={user.photoURL} title={user.displayName} className='rounded-full w-12 h-12 ' alt="" /> <button onClick={handleLogOut} className='btn btn-error'>Logout</button></div>:
                 <> <Link to="/login" className='btn btn-primary mr-2'>Login</Link>
                 <Link to="/register" className='btn btn-warning'>Sign Up</Link></>
                }
