@@ -1,7 +1,9 @@
 import { Link } from 'react-router-dom';
 import logo from '../../assets/logo.png'
+import { useContext } from 'react';
+import { AuthContext } from '../../providers/AuthProvider';
 const Header = () => {
-
+    const {user} = useContext(AuthContext);
     return (
         <div className="navbar bg-[#3B3B3B] text-white">
             <div className="navbar-start">
@@ -12,8 +14,8 @@ const Header = () => {
                     <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-[#3B3B3B] rounded-box w-52">
                         <li> <Link to='/'>Home</Link> </li>
                         <li><Link to='/all-toys'>All Toys</Link> </li>
-                        <li> <Link to='/my-toys'>My Toys</Link></li>
-                        <li><Link to='/add-toy'>Add Toy</Link> </li>
+                        {user &&  <li> <Link to='/my-toys'>My Toys</Link></li>}
+                        {user && <li><Link to='/add-toy'>Add Toy</Link> </li>}
                         <li> <Link to="/blog">Blogs</Link></li>
 
                     </ul>
@@ -24,14 +26,17 @@ const Header = () => {
                 <ul className="menu menu-horizontal px-1">
                     <li> <Link to='/'>Home</Link> </li>
                     <li><Link to='/all-toys'>All Toys</Link> </li>
-                    <li> <Link to='/my-toys'>My Toys</Link></li>
-                    <li><Link to='/add-toy'>Add Toy</Link> </li>
+                    {user &&  <li> <Link to='/my-toys'>My Toys</Link></li>}
+                    {user && <li><Link to='/add-toy'>Add Toy</Link> </li>}
                     <li> <Link to="/blog">Blogs</Link></li>
                 </ul>
             </div>
             <div className="navbar-end">
-                <Link to="/login" className='btn btn-primary mr-2'>Login</Link>
-                <Link to="/register" className='btn btn-warning'>Sign Up</Link>
+               {
+                user?<div><img src={user.photoUrl} alt="" /> <button className='btn btn-error'>Logout</button></div>:
+                <> <Link to="/login" className='btn btn-primary mr-2'>Login</Link>
+                <Link to="/register" className='btn btn-warning'>Sign Up</Link></>
+               }
             </div>
         </div>
     );
