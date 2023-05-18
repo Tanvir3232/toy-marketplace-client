@@ -1,10 +1,14 @@
 import React, { useContext } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../providers/AuthProvider';
 import { toast } from 'react-hot-toast';
 
 const Login = () => {
     const { login, signInWithGoogle } = useContext(AuthContext);
+    const location = useLocation();
+    const navigate = useNavigate();
+    const from  = location.state?.from?.pathname || '/';
+
     const handleLogin = event => {
         event.preventDefault();
         const form = event.target;
@@ -16,6 +20,7 @@ const Login = () => {
                 console.log(loggedUser)
                 toast.success("Welcome to SmartyToys");
                 form.reset();
+                navigate(from,{replace:true});
             })
             .catch(error => toast.error(error.message))
     }
@@ -26,6 +31,7 @@ const Login = () => {
                 const loggedUser = result.user;
                 console.log(loggedUser)
                 toast.success("Welcome to SmartyToys");
+                navigate(from,{replace:true});
             })
             .catch(error => toast.error(error.message))
     }
