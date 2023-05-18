@@ -28,10 +28,10 @@ const Footer = () => {
         <div>
           <span className="footer-title">Social</span>
           <div className="grid grid-flow-col gap-4">
-            <Link to='https://www.facebook.com/' ><FaFacebook className='w-10 h-8'/></Link>
-            <Link to='https://www.youtube.com/' ><FaYoutube className='w-10 h-8'/></Link>
-            <Link to='https://www.twitter.com/' ><FaTwitter className='w-10 h-8'/></Link>
-            <Link to='https://www.instagram.com/' ><FaInstagram className='w-10 h-8'/></Link>
+            <Link to='https://www.facebook.com/' ><FaFacebook className='w-10 h-8 text-blue-700'/></Link>
+            <Link to='https://www.youtube.com/' ><FaYoutube className='w-10 h-8 text-red-600'/></Link>
+            <Link to='https://www.twitter.com/' ><FaTwitter className='w-10 h-8 text-sky-600'/></Link>
+            <Link to='https://www.instagram.com/' ><FaInstagram className='w-10 h-8 text-red-400'/></Link>
             
           </div>
         </div>
