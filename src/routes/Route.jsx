@@ -9,6 +9,7 @@ import AddToy from "../pages/AddToy/AddToy";
 import ErrorPage from "../pages/ErrorPage/ErrorPage";
 import AllToy from "../pages/AllToy/AllToy";
 import SingleToy from "../pages/AllToy/SingleToy";
+import EditToyForm from "../pages/MyToys/EditToyForm";
 
 const router = createBrowserRouter([
     {
@@ -37,13 +38,18 @@ const router = createBrowserRouter([
             element:<PrivateRoute><AddToy></AddToy></PrivateRoute>
         },
         {
+            path:"/edit-toy/:id",
+            element:<PrivateRoute><EditToyForm></EditToyForm></PrivateRoute>,
+            loader:({params})=>fetch(`http://localhost:5000/toy/${params.id}`)
+        },
+        {
             path:'/all-toy',
             element:<AllToy></AllToy>,
             loader:()=>fetch('http://localhost:5000/toys')
         },
         {
             path:'/toy/:id',
-            element:<SingleToy></SingleToy>,
+            element:<PrivateRoute><SingleToy></SingleToy></PrivateRoute>,
             loader:({params})=>fetch(`http://localhost:5000/toy/${params.id}`)
         }
       ]
