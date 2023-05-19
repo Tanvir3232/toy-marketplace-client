@@ -19,7 +19,7 @@ const Header = () => {
                     </label>
                     <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-[#3B3B3B] rounded-box w-52">
                         <li> <Link to='/'>Home</Link> </li>
-                        <li><Link to='/all-toys'>All Toys</Link> </li>
+                        <li><Link to='/all-toy'>All Toys</Link> </li>
                         {user &&  <li> <Link to='/my-toys'>My Toys</Link></li>}
                         {user && <li><Link to='/add-toy'>Add Toy</Link> </li>}
                         <li> <Link to="/blog">Blogs</Link></li>
@@ -31,7 +31,7 @@ const Header = () => {
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
                     <li> <Link to='/'>Home</Link> </li>
-                    <li><Link to='/all-toys'>All Toys</Link> </li>
+                    <li><Link to='/all-toy'>All Toys</Link> </li>
                     {user &&  <li> <Link to='/my-toys'>My Toys</Link></li>}
                     {user && <li><Link to='/add-toy'>Add Toy</Link> </li>}
                     <li> <Link to="/blog">Blogs</Link></li>
