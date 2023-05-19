@@ -1,9 +1,10 @@
 import { useLoaderData } from "react-router-dom";
 import ToyRow from "./ToyRow";
 
+
+
 const AllToy = () => {
     const toys = useLoaderData();
-    console.log(toys);
     return (
         <div>
             <h1 className="text-3xl font-bold text-center my-5">All Toys</h1>
@@ -28,8 +29,9 @@ const AllToy = () => {
                          ></ToyRow>)
                        }
                     </tbody>
-                    
+                   
                 </table>
+              
             </div>
         </div>
     );

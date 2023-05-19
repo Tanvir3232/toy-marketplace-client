@@ -1,7 +1,6 @@
-
-
-const ToyRow = ({toy}) => {
-    const {sellerName,price,quantity,name,category} = toy;
+import { Link } from "react-router-dom";
+const ToyRow = ({ toy }) => {
+    const { sellerName,_id, price, quantity, name, category } = toy;
     return (
         <tr>
             <td>{sellerName}</td>
@@ -10,9 +9,14 @@ const ToyRow = ({toy}) => {
             <td>{price}</td>
             <td>{quantity}</td>
             <td>
-                <button className="btn btn-outline">View</button>
+                
+               <Link className="btn btn-outline btn-sm" to={`/toy/${_id}`}>View</Link>
             </td>
+           
+          
+           
         </tr>
+
     );
 };
 
