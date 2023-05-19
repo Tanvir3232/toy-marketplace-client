@@ -8,7 +8,7 @@ const AddToy = () => {
         event.preventDefault();
         const form = event.target;
         const name = form.name.value;
-        const category = form.name.value;
+        const category = form.category.value;
         const sellerName = user.displayName;
         const sellerEmail = user.email;
         const price = form.price.value;
