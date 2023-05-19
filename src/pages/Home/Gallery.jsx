@@ -5,9 +5,9 @@ import gallery4 from '../../assets/images/g4.png'
 const Gallery = () => {
     return (
         <div className='mt-12'>
-            <h1 className='text-5xl font-bold text-center my-5'>Toys Gallery</h1>
+            <h1 className='text-5xl font-bold text-center my-8'>Toys Gallery</h1>
             <div className='flex  flex-col md:flex-row gap-6'>
-                <div className="card md:w-1/4  bg-base-100 shadow-xl image-full">
+                <div className="card md:w-1/4 hover:scale-110 hover:-rotate-3 delay-150  bg-base-100 shadow-xl image-full">
                     <figure><img src={gallery1} className='w-full' alt="Shoes" /></figure>
                     <div className="card-body text-center">
                         <h2 className="text-white font-bold ">Language Wizards</h2>
@@ -15,7 +15,7 @@ const Gallery = () => {
                         
                     </div>
                 </div>
-                <div className="card md:w-1/4 bg-base-100 shadow-xl image-full">
+                <div className="card md:w-1/4 hover:scale-110  hover:-rotate-3 delay-150 bg-base-100 shadow-xl image-full">
                     <figure><img src={gallery2} className='w-full' alt="Shoes" /></figure>
                     <div className="card-body text-center">
                         <h2 className="text-white font-bold ">Creative Builders</h2>
@@ -23,7 +23,7 @@ const Gallery = () => {
 
                     </div>
                 </div>
-                <div className="card md:w-1/4 bg-base-100 shadow-xl image-full">
+                <div className="card md:w-1/4 hover:-rotate-3 hover:scale-110 delay-150 bg-base-100 shadow-xl image-full">
                     <figure><img src={gallery3} className='w-full' alt="Shoes" /></figure>
                     <div className="card-body text-center">
                         <h2 className="text-white font-bold ">STEM Explorers</h2>
@@ -31,7 +31,7 @@ const Gallery = () => {
 
                     </div>
                 </div>
-                <div className="card md:w-1/4 bg-base-100 shadow-xl image-full">
+                <div className="card md:w-1/4 hover:-rotate-3 hover:scale-110 delay-150 bg-base-100 shadow-xl image-full">
                     <figure><img src={gallery4} className='w-full' alt="Shoes" /></figure>
                     <div className="card-body text-center">
                         <h2 className="text-white font-bold ">Nature Explorers</h2>
