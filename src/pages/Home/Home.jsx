@@ -2,6 +2,8 @@ import React from 'react';
 import Banner from './Banner';
 import Gallery from './Gallery';
 import Toys from './Toys';
+import Testimonial from './Testimonial';
+import Services from './Services';
 
 const Home = () => {
     return (
@@ -9,6 +11,8 @@ const Home = () => {
             <Banner></Banner>
             <Gallery></Gallery>
             <Toys></Toys>
+            <Testimonial></Testimonial>
+            <Services></Services>
         </div>
     );
 };
