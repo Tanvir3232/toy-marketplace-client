@@ -22,7 +22,7 @@ const Toys = () => {
     }
     return (
         <div className='my-6'>
-            <div className="tabs tabs-boxed md:flex justify-center">
+            <div className="tabs tabs-boxed bg-white md:flex justify-center">
                 <div className='grid md:grid-cols-3 gap-2'>
                     {
                         categories.map((category,index)=><button onClick={()=>handleCategoryData(category)} key={index} className={`${tabActive==category?'tab-active':''} tab font-bold text-gray-600 uppercase hover:text-gray-950 text-2xl px-4  bg-blue-300`}>{category} Toys</button>)

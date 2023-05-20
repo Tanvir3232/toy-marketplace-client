@@ -6,7 +6,7 @@ const Gallery = () => {
     return (
         <div className='mt-12'>
             <h1 className='text-5xl font-bold text-center my-8'>Toys Gallery</h1>
-            <div className='flex  flex-col md:flex-row gap-6'>
+            <div className='flex  flex-col md:flex-row gap-6 px-5'>
                 <div className="card md:w-1/4 hover:scale-110 hover:-rotate-3 delay-150  bg-base-100 shadow-xl image-full">
                     <figure><img src={gallery1} className='w-full' alt="Shoes" /></figure>
                     <div className="card-body text-center">

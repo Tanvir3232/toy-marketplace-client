@@ -3,9 +3,9 @@ import time  from '../../assets/images/time.png'
 import money from '../../assets/images/money.png'
 const Services = () => {
     return (
-        <div className="my-8">
+        <div className="my-12">
             <h1 className='text-5xl font-bold text-center '>  Exceptional Services</h1>
-            <div className="grid md:grid-cols-3 ">
+            <div className="grid md:grid-cols-3 gap-8 ">
                 <div className="card bg-base-100 shadow-xl">
                     <figure className="px-10 pt-10">
                        <img src={free} alt="" />
