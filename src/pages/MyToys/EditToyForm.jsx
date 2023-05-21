@@ -14,15 +14,14 @@ const EditToyForm = () => {
         const form = event.target;
         const name = form.name.value;
         const category = form.category.value;
-       
         const price = form.price.value;
         const rating = form.rating.value;
         const quantity = form.quantity.value;
         const photoUrl = form.photoUrl.value;
         const description = form.description.value;
-        const updateToy = { name, category,   price, rating, quantity, photoUrl, description };
+        const updateToy = { name, category, price, rating, quantity, photoUrl, description };
 
-        fetch(`http://localhost:5000/toy/${id}`, {
+        fetch(`https://assignment-11-server-brown-sigma.vercel.app/toy/${id}`, {
             method: "PATCH",
             headers: {
                 'content-type': 'application/json'
@@ -85,11 +84,11 @@ const EditToyForm = () => {
                 </div>
                 <div className="form-control">
                     <label className="label">
-                        <span className="label-text font-bold">Price</span>
+                        <span className="label-text font-bold">price</span>
                     </label>
                     <label className="input-group ">
 
-                        <input type="number" defaultValue={oldToy.price} name='price' placeholder="Price" className="input  input-info input-bordered w-full " />
+                        <input type="text"  defaultValue={oldToy.price} name='price' placeholder="price" className="input  input-info input-bordered w-full " />
                     </label>
                 </div>
                 <div className="form-control">
@@ -107,7 +106,7 @@ const EditToyForm = () => {
                     </label>
                     <label className="input-group ">
 
-                        <input type="number"  defaultValue={oldToy.quantity} name='quantity' placeholder="Quantity" className="input  input-info input-bordered w-full " />
+                        <input type="text"  defaultValue={oldToy.quantity} name='quantity' placeholder="Quantity" className="input  input-info input-bordered w-full " />
                     </label>
                 </div>
                 <div className="form-control  w-full">

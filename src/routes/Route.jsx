@@ -45,17 +45,17 @@ const router = createBrowserRouter([
         {
             path:"/edit-toy/:id",
             element:<PrivateRoute><EditToyForm></EditToyForm></PrivateRoute>,
-            loader:({params})=>fetch(`http://localhost:5000/toy/${params.id}`)
+            loader:({params})=>fetch(`https://assignment-11-server-brown-sigma.vercel.app/toy/${params.id}`)
         },
         {
             path:'/all-toy',
             element:<AllToy></AllToy>,
-            loader:()=>fetch('http://localhost:5000/toys')
+            loader:()=>fetch('https://assignment-11-server-brown-sigma.vercel.app/toys')
         },
         {
             path:'/toy/:id',
             element:<PrivateRoute><SingleToy></SingleToy></PrivateRoute>,
-            loader:({params})=>fetch(`http://localhost:5000/toy/${params.id}`)
+            loader:({params})=>fetch(`https://assignment-11-server-brown-sigma.vercel.app/toy/${params.id}`)
         }
       ]
     },

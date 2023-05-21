@@ -11,7 +11,7 @@ const AllToy = () => {
         event.preventDefault();
         const searchText = event.target.searchText.value;
         console.log(searchText)
-        fetch(`http://localhost:5000/toys?name=${searchText}`)
+        fetch(`https://assignment-11-server-brown-sigma.vercel.app/toys?name=${searchText}`)
         .then(res=>res.json())
         .then(data=>setToys(data))
     }

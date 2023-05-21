@@ -9,14 +9,14 @@ const Toys = () => {
         "math","science","language"
     ]
     useEffect(()=>{
-        fetch('http://localhost:5000/toys')
+        fetch('https://assignment-11-server-brown-sigma.vercel.app/toys')
         .then(res=>res.json())
         .then(data=>setToys(data))
     },[])
     const handleCategoryData = category =>{
         console.log(category);
         setTabActive(category);
-        fetch(`http://localhost:5000/toys?category=${category}`)
+        fetch(`https://assignment-11-server-brown-sigma.vercel.app/toys?category=${category}`)
         .then(res=>res.json())
         .then(data=>setToys(data))
     }
