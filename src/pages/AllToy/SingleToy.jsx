@@ -1,3 +1,4 @@
+import { Rating } from "@smastrom/react-rating";
 import { Helmet } from "react-helmet";
 import { useLoaderData } from "react-router-dom";
 
@@ -15,7 +16,11 @@ const SingleToy = () => {
                 <p className="py-2"><strong>Description:</strong> {toy.description}</p>
                 <p className="py-2"><strong>Quantity:</strong> {toy.quantity}</p>
                 <p className="py-2"><strong>Price:</strong> {toy.price} Tk</p>
-                <p className="py-2"><strong>Rating:</strong> {toy.rating}</p>
+                <div className="flex gap-3 items-center"><strong>Rating: </strong>  <Rating
+                    style={{ maxWidth: 150 }}
+                    value={toy.rating}
+                    readOnly
+                />( {toy.rating} )</div>
                 <div className="border-2 border-gray-900 text-center mt-6">
                     <p  className="py-2 text-2xl font-bold">Seller Information</p>
                     <p className="py-2"><strong> Name:</strong> {toy.sellerName}</p>

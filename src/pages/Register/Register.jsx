@@ -1,9 +1,9 @@
-import React, { useContext } from 'react';
+import  { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../providers/AuthProvider';
 import { toast } from 'react-hot-toast';
 import { Helmet } from 'react-helmet';
-
+import registerBanner from '../../assets/images/register.png'
 const Register = () => {
     const {register,saveProfile} = useContext(AuthContext);
     const handleSignUp = event =>{
@@ -32,13 +32,13 @@ const Register = () => {
 
     }
     return (
-        <div className="hero min-h-screen bg-base-200">
+        <div className="hero min-h-screen">
             <Helmet>
                 <title>SmartyToy  | Sign Up</title>
             </Helmet>
-            <div className="hero-content flex-col ">
-                <div className="text-center lg:text-left">
-                    <h1 className="text-5xl font-bold">Please Sign Up</h1>
+            <div className="hero-content flex md:flex-row flex-col ">
+                <div className="text-center h-full">
+                    <img src={registerBanner} className='rounded-2xl h-full' alt="" />
 
                 </div>
                 <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
