@@ -126,7 +126,7 @@ const AddToy = () => {
                     </label>
 
 
-                    <textarea name='description' className="textarea textarea-info w-full" placeholder="Bio"></textarea>
+                    <textarea name='description' className="textarea textarea-info w-full" placeholder="Toy Description"></textarea>
 
                 </div>
                 <div className="form-control col-span-2 w-full">
