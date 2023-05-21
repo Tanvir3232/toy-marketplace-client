@@ -15,7 +15,7 @@ const SingleToy = () => {
                 <h3 className="text-3xl font-bold">{toy.name}</h3>
                 <p className="py-2"><strong>Description:</strong> {toy.description}</p>
                 <p className="py-2"><strong>Quantity:</strong> {toy.quantity}</p>
-                <p className="py-2"><strong>Price:</strong> {toy.price} Tk</p>
+                <p className="py-2"><strong>Price:</strong> $ {toy.price}</p>
                 <div className="flex gap-3 items-center"><strong>Rating: </strong>  <Rating
                     style={{ maxWidth: 150 }}
                     value={toy.rating}

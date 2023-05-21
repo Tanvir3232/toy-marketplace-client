@@ -19,7 +19,7 @@ const ToyCard = ({ toy }) => {
             <figure><img src={photoUrl} className='h-48 w-full' alt="Shoes" /></figure>
             <div className="card-body">
                 <h2 className="card-title">{name}</h2>
-                <p><strong>Price: </strong> {price}</p>
+                <p><strong>Price: </strong> ${price}</p>
                 <div className="flex gap-3 items-center"><strong>Rating: </strong>  <Rating
                     style={{ maxWidth: 150 }}
                     value={rating}
