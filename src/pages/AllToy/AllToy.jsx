@@ -1,13 +1,18 @@
-import { useLoaderData } from "react-router-dom";
+
 import ToyRow from "./ToyRow";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Helmet } from "react-helmet";
 
 
 
 const AllToy = () => {
-    const allToys = useLoaderData();
-    const [toys,setToys] = useState(allToys);
+    const [toys,setToys] = useState([]);
+    useEffect(()=>{
+        fetch(`https://assignment-11-server-brown-sigma.vercel.app`)
+        .then(res=>res.json())
+        .then(data => setToys(data))
+    },[])
+    
     const handleSearch = event =>{
         event.preventDefault();
         const searchText = event.target.searchText.value;

@@ -49,8 +49,7 @@ const router = createBrowserRouter([
         },
         {
             path:'/all-toy',
-            element:<AllToy></AllToy>,
-            loader:()=>fetch('https://assignment-11-server-brown-sigma.vercel.app/toys')
+            element:<AllToy></AllToy>
         },
         {
             path:'/toy/:id',
