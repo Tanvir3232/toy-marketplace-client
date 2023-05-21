@@ -1,6 +1,7 @@
 import { useLoaderData } from "react-router-dom";
 import ToyRow from "./ToyRow";
 import { useState } from "react";
+import { Helmet } from "react-helmet";
 
 
 
@@ -17,6 +18,9 @@ const AllToy = () => {
     }
     return (
         <div>
+             <Helmet>
+                <title>SmartyToy  | All Toys</title>
+            </Helmet>
             <h1 className="text-3xl font-bold text-center my-5">All Toys</h1>
             <div className="md:w-1/5 mx-auto my-5">
                 <form onSubmit={handleSearch} className="input-group w-full">

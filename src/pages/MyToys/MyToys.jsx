@@ -2,6 +2,7 @@ import { useContext, useEffect, useState } from 'react';
 import { AuthContext } from '../../providers/AuthProvider';
 import MyToyRow from './MyToyRow';
 import Swal from 'sweetalert2';
+import { Helmet } from 'react-helmet';
 
 const MyToys = () => {
     const { user } = useContext(AuthContext);
@@ -53,6 +54,9 @@ const MyToys = () => {
     }
     return (
         <div>
+            <Helmet>
+                <title>SmartyToy  | My Toys</title>
+            </Helmet>
             <h1 className="text-3xl font-bold text-center my-5">My Toys</h1>
             
                 <select  onChange={handleSelect} className="select select-bordered w-36">

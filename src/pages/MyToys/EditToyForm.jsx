@@ -3,6 +3,7 @@ import { toast } from 'react-hot-toast';
 import { AuthContext } from '../../providers/AuthProvider';
 import { useLoaderData, useParams } from 'react-router-dom';
 import Swal from 'sweetalert2';
+import { Helmet } from 'react-helmet';
 
 const EditToyForm = () => {
     const {user} = useContext(AuthContext);
@@ -42,6 +43,9 @@ const EditToyForm = () => {
     }
     return (
         <div>
+            <Helmet>
+                <title>SmartyToy  | Edit Toy</title>
+            </Helmet>
             <h1 className='text-4xl font-bold text-center my-5'>Update a Toy </h1>
             <form onSubmit={handleUpdateToy} className='md:w-2/3 mx-auto grid grid-cols-1 md:grid-cols-2 gap-6'>
                 <div className="form-control">

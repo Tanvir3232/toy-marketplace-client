@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { AuthContext } from '../../providers/AuthProvider';
 import { toast } from 'react-hot-toast';
+import { Helmet } from 'react-helmet';
 
 const AddToy = () => {
     const { user } = useContext(AuthContext);
@@ -34,6 +35,9 @@ const AddToy = () => {
     }
     return (
         <div>
+             <Helmet>
+                <title>SmartyToy  | Add Toy</title>
+            </Helmet>
             <h1 className='text-4xl font-bold text-center my-5'>Add a Toy </h1>
             <form onSubmit={handleAddToy} className='md:w-2/3 mx-auto grid grid-cols-1 md:grid-cols-2 gap-6'>
                 <div className="form-control">

@@ -2,12 +2,13 @@ import React, { useContext } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../providers/AuthProvider';
 import { toast } from 'react-hot-toast';
+import { Helmet } from 'react-helmet';
 
 const Login = () => {
     const { login, signInWithGoogle } = useContext(AuthContext);
     const location = useLocation();
     const navigate = useNavigate();
-    const from  = location.state?.from?.pathname || '/';
+    const from = location.state?.from?.pathname || '/';
 
     const handleLogin = event => {
         event.preventDefault();
@@ -20,7 +21,7 @@ const Login = () => {
                 console.log(loggedUser)
                 toast.success("Welcome to SmartyToys");
                 form.reset();
-                navigate(from,{replace:true});
+                navigate(from, { replace: true });
             })
             .catch(error => toast.error(error.message))
     }
@@ -31,13 +32,16 @@ const Login = () => {
                 const loggedUser = result.user;
                 console.log(loggedUser)
                 toast.success("Welcome to SmartyToys");
-                navigate(from,{replace:true});
+                navigate(from, { replace: true });
             })
             .catch(error => toast.error(error.message))
     }
-   
+
     return (
         <div className="hero min-h-screen bg-base-200">
+            <Helmet>
+                <title>SmartyToy  | Login</title>
+            </Helmet>
             <div className="hero-content flex-col">
                 <div className="text-center lg:text-left">
                     <h1 className="text-5xl font-bold">Please Login!</h1>

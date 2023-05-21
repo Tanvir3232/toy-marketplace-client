@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../providers/AuthProvider';
 import { toast } from 'react-hot-toast';
+import { Helmet } from 'react-helmet';
 
 const Register = () => {
     const {register,saveProfile} = useContext(AuthContext);
@@ -32,6 +33,9 @@ const Register = () => {
     }
     return (
         <div className="hero min-h-screen bg-base-200">
+            <Helmet>
+                <title>SmartyToy  | Sign Up</title>
+            </Helmet>
             <div className="hero-content flex-col ">
                 <div className="text-center lg:text-left">
                     <h1 className="text-5xl font-bold">Please Sign Up</h1>

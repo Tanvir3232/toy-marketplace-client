@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet";
 import { useLoaderData } from "react-router-dom";
 
 const SingleToy = () => {
@@ -5,6 +6,9 @@ const SingleToy = () => {
 
     return (
         <div className="flex flex-col md:flex-row gap-8">
+             <Helmet>
+                <title>SmartyToy  | Toy Details</title>
+            </Helmet>
             <img src={toy.photoUrl} className="rounded-md md:w-3/5" alt="" />
             <div className="py-8 md:w-2/5">
                 <h3 className="text-3xl font-bold">{toy.name}</h3>
