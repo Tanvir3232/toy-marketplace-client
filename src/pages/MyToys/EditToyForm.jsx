@@ -48,7 +48,7 @@ const EditToyForm = () => {
             </Helmet>
             <h1 className='text-4xl font-bold text-center my-5'>Update a Toy </h1>
             <form onSubmit={handleUpdateToy} className='md:w-2/3 mx-auto grid grid-cols-1 md:grid-cols-2 gap-6'>
-                <div className="form-control">
+                <div className="form-control col-span-2 md:col-span-1">
                     <label className="label">
                         <span className="label-text font-bold">Toy Name</span>
                     </label>
@@ -57,7 +57,7 @@ const EditToyForm = () => {
                         <input type="text" defaultValue={oldToy.name} name='name' placeholder="Toy name" className="input  input-info input-bordered w-full " />
                     </label>
                 </div>
-                <div className="form-control">
+                <div className="form-control col-span-2 md:col-span-1">
                     <label className="label">
                         <span className="label-text font-bold">Toy Category</span>
                     </label>
@@ -68,7 +68,7 @@ const EditToyForm = () => {
                         <option value='language'>Language</option>
                     </select>
                 </div>
-                <div className="form-control">
+                <div className="form-control col-span-2 md:col-span-1">
                     <label className="label">
                         <span className="label-text font-bold">Seller Name</span>
                     </label>
@@ -77,7 +77,7 @@ const EditToyForm = () => {
                         <input type="text" defaultValue={user.displayName} readOnly name='sellerName' placeholder="Seller name" className="input  input-info input-bordered w-full " />
                     </label>
                 </div>
-                <div className="form-control">
+                <div className="form-control col-span-2 md:col-span-1">
                     <label className="label">
                         <span className="label-text font-bold">Seller Email</span>
                     </label>
@@ -86,7 +86,7 @@ const EditToyForm = () => {
                         <input type="text" defaultValue={user.email} readOnly name='sellerEmail' placeholder="Seller Email" className="input  input-info input-bordered w-full " />
                     </label>
                 </div>
-                <div className="form-control">
+                <div className="form-control col-span-2 md:col-span-1">
                     <label className="label">
                         <span className="label-text font-bold">price</span>
                     </label>
@@ -95,7 +95,7 @@ const EditToyForm = () => {
                         <input type="text"  defaultValue={oldToy.price} name='price' placeholder="price" className="input  input-info input-bordered w-full " />
                     </label>
                 </div>
-                <div className="form-control">
+                <div className="form-control col-span-2 md:col-span-1">
                     <label className="label">
                         <span className="label-text font-bold">Rating</span>
                     </label>
@@ -104,7 +104,7 @@ const EditToyForm = () => {
                         <input type="text"  defaultValue={oldToy.rating} name='rating' placeholder="Rating" className="input  input-info input-bordered w-full " />
                     </label>
                 </div>
-                <div className="form-control">
+                <div className="form-control col-span-2 md:col-span-1">
                     <label className="label">
                         <span className="label-text font-bold">Quantity</span>
                     </label>
@@ -113,7 +113,7 @@ const EditToyForm = () => {
                         <input type="text"  defaultValue={oldToy.quantity} name='quantity' placeholder="Quantity" className="input  input-info input-bordered w-full " />
                     </label>
                 </div>
-                <div className="form-control  w-full">
+                <div className="form-control col-span-2 md:col-span-1 ">
                     <label className="label">
                         <span className="label-text font-bold">Photo Url</span>
                     </label>

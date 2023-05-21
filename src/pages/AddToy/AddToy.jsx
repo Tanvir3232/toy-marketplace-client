@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import { AuthContext } from '../../providers/AuthProvider';
 import { toast } from 'react-hot-toast';
 import { Helmet } from 'react-helmet';
+import Swal from 'sweetalert2';
 
 const AddToy = () => {
     const { user } = useContext(AuthContext);
@@ -29,7 +30,12 @@ const AddToy = () => {
             .then(res => res.json())
             .then(data => {
                 if (data.insertedId) {
-                    toast.success('Toy added Successfully')
+                    Swal.fire(
+                        'Successful!',
+                        'Toy added Successfully!',
+                        'success'
+                      );
+                    form.reset();
                 }
             })
     }
@@ -40,7 +46,7 @@ const AddToy = () => {
             </Helmet>
             <h1 className='text-4xl font-bold text-center my-5'>Add a Toy </h1>
             <form onSubmit={handleAddToy} className='md:w-2/3 mx-auto grid grid-cols-1 md:grid-cols-2 gap-6'>
-                <div className="form-control">
+                <div className="form-control col-span-2 md:col-span-1">
                     <label className="label">
                         <span className="label-text font-bold">Toy Name</span>
                     </label>
@@ -49,7 +55,7 @@ const AddToy = () => {
                         <input type="text" name='name' placeholder="Toy name" className="input  input-info input-bordered w-full " />
                     </label>
                 </div>
-                <div className="form-control">
+                <div className="form-control col-span-2 md:col-span-1">
                     <label className="label">
                         <span className="label-text font-bold">Toy Category</span>
                     </label>
@@ -60,7 +66,7 @@ const AddToy = () => {
                         <option value='language'>Language</option>
                     </select>
                 </div>
-                <div className="form-control">
+                <div className="form-control col-span-2 md:col-span-1">
                     <label className="label">
                         <span className="label-text font-bold">Seller Name</span>
                     </label>
@@ -69,7 +75,7 @@ const AddToy = () => {
                         <input type="text" defaultValue={user.displayName} name='sellerName' placeholder="Seller name" className="input  input-info input-bordered w-full " />
                     </label>
                 </div>
-                <div className="form-control">
+                <div className="form-control col-span-2 md:col-span-1">
                     <label className="label">
                         <span className="label-text font-bold">Seller Email</span>
                     </label>
@@ -78,7 +84,7 @@ const AddToy = () => {
                         <input type="text" defaultValue={user.email} readOnly name='sellerEmail' placeholder="Seller Email" className="input  input-info input-bordered w-full " />
                     </label>
                 </div>
-                <div className="form-control">
+                <div className="form-control col-span-2 md:col-span-1">
                     <label className="label">
                         <span className="label-text font-bold">Price</span>
                     </label>
@@ -87,7 +93,7 @@ const AddToy = () => {
                         <input type="text" name='price' placeholder="price" className="input  input-info input-bordered w-full " />
                     </label>
                 </div>
-                <div className="form-control">
+                <div className="form-control col-span-2 md:col-span-1">
                     <label className="label">
                         <span className="label-text font-bold">Rating</span>
                     </label>
@@ -96,7 +102,7 @@ const AddToy = () => {
                         <input type="text" name='rating' placeholder="Rating" className="input  input-info input-bordered w-full " />
                     </label>
                 </div>
-                <div className="form-control">
+                <div className="form-control col-span-2 md:col-span-1">
                     <label className="label">
                         <span className="label-text font-bold">Quantity</span>
                     </label>
@@ -105,7 +111,7 @@ const AddToy = () => {
                         <input type="text" name='quantity' placeholder="Quantity" className="input  input-info input-bordered w-full " />
                     </label>
                 </div>
-                <div className="form-control  w-full">
+                <div className="form-control col-span-2 md:col-span-1">
                     <label className="label">
                         <span className="label-text font-bold">Photo Url</span>
                     </label>
