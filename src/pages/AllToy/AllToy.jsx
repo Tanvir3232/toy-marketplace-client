@@ -8,11 +8,11 @@ import { Helmet } from "react-helmet";
 const AllToy = () => {
     const [toys,setToys] = useState([]);
     useEffect(()=>{
-        fetch(`https://assignment-11-server-brown-sigma.vercel.app`)
+        fetch(`https://assignment-11-server-brown-sigma.vercel.app/toys`)
         .then(res=>res.json())
         .then(data => setToys(data))
     },[])
-    
+    console.log(toys);
     const handleSearch = event =>{
         event.preventDefault();
         const searchText = event.target.searchText.value;
